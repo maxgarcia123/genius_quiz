@@ -18,6 +18,7 @@ type QuizContextProps = {
   answeredForm: QuestionsProps[] | [];
   numberCorrectAnswers: number;
   percentCorrectAnswers: number;
+  lastNumberQuestions: number;
   setPercentCorrectAnswers: React.Dispatch<number>;
   handlePercentCorrectAnswers: () => void;
   setAnswers: React.Dispatch<QuestionsProps[]> | React.Dispatch<[]>;
@@ -34,6 +35,7 @@ type Props = {
 
 export const QuizContextProvider = (props: Props) => {
   const [numberQuestions, setNumberQuestions] = useState(10);
+  const [lastNumberQuestions, setLastNumberQuestions] = useState(0);
   const [difficultyValue, setDifficultyValue] = useState(10);
   const [answeredForm, setLastForm] = useState<QuestionsProps[] | any>([]);
   const [questions, setQuestions] = useState([]);
@@ -45,11 +47,11 @@ export const QuizContextProvider = (props: Props) => {
   useEffect(() => {
     const form: any = localStorage.getItem('last-quiz-form');
     const formResults: any = localStorage.getItem('last-quiz-form-results');
-    if (localStorage) {
+    if (form && formResults) {
       const formObj = JSON.parse(form);
       const formResultsObj = JSON.parse(formResults);
       setLastForm(formObj);
-      setNumberQuestions(formResultsObj.numberQuestions);
+      setLastNumberQuestions(formResultsObj.numberQuestions);
       setNumberCorrectAnswers(formResultsObj.numberCorrectAnswers);
     }
   }, []);
@@ -143,6 +145,7 @@ export const QuizContextProvider = (props: Props) => {
     answeredForm,
     setAnswers: setQuestions,
     numberCorrectAnswers,
+    lastNumberQuestions,
     setNumberCorrectAnswers,
     percentCorrectAnswers,
     setPercentCorrectAnswers,
