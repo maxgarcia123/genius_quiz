@@ -16,8 +16,7 @@ export type SelectProps = {
   handleChange: (value: SelectChangeEvent<any>) => void;
   label: string;
   items: MenuItemProps[];
-  id?: string;
-  required?: boolean;
+  required: boolean;
 };
 
 const SimpleSelect: React.FC<SelectProps> = ({

@@ -84,6 +84,7 @@ const SettingsQuiz = () => {
                 helperText={errorNumberQuestions ? 'Incorrect number' : ''}
               />
               <SimpleSelect
+                required={false}
                 value={difficultyValue}
                 handleChange={handleDifficultyChange}
                 label="Select Difficulty"

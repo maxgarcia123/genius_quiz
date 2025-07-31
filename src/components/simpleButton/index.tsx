@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import Button from '@mui/material/Button';
 import {styled} from '@mui/styles';
@@ -19,10 +20,8 @@ export type colorProps = {
 export type ButtonProps = {
   handleClick?: () => void;
   title: string;
-  size?: 'bnt-sm' | 'bnt-medium' | 'bnt-large';
   color?: colorProps;
   style?: React.CSSProperties;
-  id?: string;
 };
 
 const SimpleButton: React.FC<ButtonProps> = ({

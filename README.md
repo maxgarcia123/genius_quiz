@@ -1,4 +1,5 @@
 # Genius Quiz Game
+
 ![Static Badge](https://img.shields.io/badge/Licence-MIT-green)
 
 ## About The Project
@@ -27,6 +28,7 @@ This project is a case study using the Formik library to prevent unnecessary for
 ## How to run de the project
 
 ### requirements
+
 ![Static Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 [Version](https://nodejs.org/en/): LTS or ^10.16
@@ -40,12 +42,15 @@ This project is a case study using the Formik library to prevent unnecessary for
 ## After install the dependencies run the following scripts
 
 ### Clone the repository
+
 git clone https://github.com/maxgarcia123/genius_quiz
 
-### Enter on project folder end run 
+### Enter on project folder end run
+
 yarn install or npm install
 
 ### after install the project dependencies of package.json run
+
 yarn start or npm start
 
 ### `npm start or yarn start`
@@ -56,5 +61,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 You should now see the project running on your localhost. If you encounter any issues during installation or while running the project, refer to the [ReactJS documentation](https://react.dev/learn) can help you.
 
 ## Contacs
+
 - Email: maxg.silva123@gmail.com
 - [Linkedin](https://www.linkedin.com/in/max-garcia-silva-front-end-developer/)

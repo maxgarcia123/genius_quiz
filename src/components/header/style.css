@@ -1,47 +1,47 @@
 header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #logo-sm {
-    max-width: 200px;
-    max-height: 100px;
+  max-width: 200px;
+  max-height: 100px;
 }
 
 #logo-medium {
-    max-width: 450px;
-    max-height: 200px;
+  max-width: 450px;
+  max-height: 200px;
 }
 
 #logo-large {
-    max-width: 900px;
-    max-height: 200px;
+  max-width: 900px;
+  max-height: 200px;
 }
 
 h2 {
-    color: #FFF;
-    font-family:  Nunito;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 2.5rem;
-    width: 95%;
+  color: #fff;
+  font-family: Nunito;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2.5rem;
+  width: 95%;
 }
 
 @media (max-width: 700px) {
-    #logo-large {
-        max-width: 400px;
-    }
-    #logo-medium {
-        max-width: 300px;
-    }
-    h2 {
-        font-size: 1rem;
-    }
+  #logo-large {
+    max-width: 400px;
+  }
+  #logo-medium {
+    max-width: 300px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
 }
