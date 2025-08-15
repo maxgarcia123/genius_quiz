@@ -40,11 +40,11 @@ const SettingsQuiz = () => {
   };
 
   return (
-    <div id="background-settings">
-      <div id="container">
+    <div className="content gradient-wave-background">
+      <div className="quiz-container">
         {finishedSettings ? (
           <div id="start-quiz-container">
-            <div id="title-container">
+            <div className="title-container">
               <h1 style={{marginTop: '-8rem', width: '90%'}}>You are ready?</h1>
             </div>
             <div id="button-group">
@@ -62,7 +62,7 @@ const SettingsQuiz = () => {
           </div>
         ) : (
           <>
-            <div id="title-container">
+            <div className="title-container">
               <h1>Quiz Settings</h1>
               <Settings fontSize="large" id="setting-icon" />
             </div>

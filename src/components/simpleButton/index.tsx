@@ -22,12 +22,14 @@ export type ButtonProps = {
   title: string;
   color?: colorProps;
   style?: React.CSSProperties;
+  id?: string;
 };
 
 const SimpleButton: React.FC<ButtonProps> = ({
   title,
   color,
   style,
+  id,
   handleClick,
 }) => {
   const handleBackgroundColor = () => {
@@ -60,7 +62,11 @@ const SimpleButton: React.FC<ButtonProps> = ({
 
   return (
     <>
-      <StyledButton onClick={handleClick} style={style} variant="contained">
+      <StyledButton
+        id={id}
+        onClick={handleClick}
+        style={style}
+        variant="contained">
         {title}
       </StyledButton>
     </>

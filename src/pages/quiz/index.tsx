@@ -33,8 +33,10 @@ const Quiz = () => {
   };
   const formQuestions = questions;
   return (
-    <div id="background">
-      <div id="container-form">
+    <div className="container gradient-wave-background bg-full ">
+      <div
+        style={{overflow: 'scroll', padding: '2.2rem'}}
+        className="quiz-container">
         <Formik
           initialValues={{formQuestions}}
           onSubmit={values => {

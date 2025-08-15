@@ -14,12 +14,8 @@ import {useQuizContext} from '../../contexts/quizContexts';
 import SimpleButton from '../../components/simpleButton';
 
 const Report = () => {
-  const {
-    numberCorrectAnswers,
-    numberQuestions,
-    answeredForm,
-    lastNumberQuestions,
-  } = useQuizContext();
+  const {numberCorrectAnswers, numberQuestions, answeredForm} =
+    useQuizContext();
 
   const handleRadioColor = (correctAnswer: string, Answer: string) => {
     if (correctAnswer === Answer) {
@@ -43,21 +39,16 @@ const Report = () => {
   };
 
   return (
-    <div id="background">
-      <div id="container">
-        <div id="title-report-container">
+    <div className="container gradient-wave-background bg-full ">
+      <div className="quiz-container">
+        <div className="title-container">
           <h1>Report of your quiz</h1>
           <LibraryBooks fontSize="large" id="setting-icon" />
         </div>
         {answeredForm?.length > 0 ? (
           <>
             <div id="report-container">
-              <h3>
-                {lastNumberQuestions > 0
-                  ? lastNumberQuestions
-                  : numberCorrectAnswers}{' '}
-                right answers
-              </h3>
+              <h3>{numberCorrectAnswers} right answers</h3>
               <h3 style={{marginLeft: '1rem'}}>
                 {numberQuestions - numberCorrectAnswers} wrong answers
               </h3>
